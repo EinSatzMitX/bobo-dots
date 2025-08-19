@@ -5,20 +5,20 @@
   ...
 }: let
   terminal = "kitty";
-  base00 = "0F1419";
-  base01 = "131721";
-  base03 = "3E4B59";
-  base05 = "E6E1CF";
-  base06 = "E6E1CF";
-  base07 = "F3F4F5";
-  base08 = "F07178";
-  base09 = "FF8F40";
-  base0A = "FFB454";
-  base0B = "B8CC52";
-  base0C = "95E6CB";
-  base0D = "59C2FF";
-  base0E = "D2A6FF";
-  base0F = "E6B673";
+  base00 = "282828";
+  base01 = "3C3836";
+  base03 = "665C54";
+  base05 = "BDAE93";
+  base06 = "D5C4A1";
+  base07 = "EBDBB2";
+  base08 = "FB4934";
+  base09 = "FE8019";
+  base0A = "FABD2F";
+  base0B = "B8BB26";
+  base0C = "8EC07C";
+  base0D = "83A538";
+  base0E = "D3869B";
+  base0F = "D65D0E";
 in
   with lib; {
     # Configure & Theme Waybar
@@ -201,7 +201,7 @@ in
             border-radius: 15px;
             border: 0px;
             color: #${base00};
-            background: linear-gradient(45deg, #${base0D}, #${base0E});
+            background: linear-gradient(45deg, #${base09}, #${base0A});
             opacity: 0.5;
             transition: all 0.3s ease-in-out;
           }
@@ -211,7 +211,7 @@ in
             border-radius: 15px;
             border: 0px;
             color: #${base00};
-            background: linear-gradient(45deg, #${base0D}, #${base0E});
+            background: linear-gradient(45deg, #${base09}, #${base0A});
             opacity: 1.0;
             min-width: 40px;
             transition: all 0.3s ease-in-out;
@@ -219,7 +219,7 @@ in
           #workspaces button:hover {
             border-radius: 15px;
             color: #${base00};
-            background: linear-gradient(45deg, #${base0D}, #${base0E});
+            background: linear-gradient(45deg, #${base09}, #${base0A});
             opacity: 0.8;
           }
           tooltip {
