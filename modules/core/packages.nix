@@ -24,6 +24,7 @@
     [
       appimage-run # Needed For AppImage Support
       aseprite # Pixelart editor
+      bat # Cooler cat
       blender # 3D Modeling Software
       brave # Brave Browser
       btop # System Task Manager
@@ -34,7 +35,7 @@
       cowsay # Great Fun Terminal Program
       docker-compose # Allows Controlling Docker From A Single File
       duf # Utility For Viewing Disk Usage In Terminal
-      # eza # Beautiful ls Replacement
+      eza # Beautiful ls Replacement
       fastfetch # System info
       ffmpeg # Terminal Video / Audio Editing
       file-roller # Archive Manager
@@ -78,6 +79,7 @@
       playerctl # Allows Changing Media Volume Through Scripts
       polychromatic # For configuring razer devices
       prismlauncher # Minecraft Launcher
+      quickshell # Framework for creating cool looking widgets
       r2modman # Mod manager for Steam games
       # rhythmbox
       ripgrep # Improved Grep
