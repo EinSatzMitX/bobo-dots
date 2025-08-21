@@ -24,6 +24,7 @@ in {
   systemd.user.targets.hyprland-session.Unit.Wants = [
     "xdg-desktop-autostart.target"
   ];
+
   # Place Files Inside Home Directory
   home.file = {
     "Pictures/Wallpapers" = {
@@ -51,24 +52,15 @@ in {
         "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user start hyprpolkitagent"
-        "killall -q swww;sleep .5 && swww init"
+        "killall -q swww;sleep .5 && swww-daemon &"
         "killall -q waybar;sleep .5 && waybar"
         "killall -q swaync;sleep .5 && swaync"
         "nm-applet --indicator"
         "pypr &"
         "sleep 1.5 && swww img ${stylixImage}"
       ];
-      #
-      # exec = [
-      #   "cd $HOME/zaneyos/programs && nohup ./bongocat >/dev/null 2>&1 &"
-      # ];
-      #
       input = {
         kb_layout = "${keyboardLayout}";
-        # kb_options = [
-        #   "grp:alt_caps_toggle"
-        #   "caps:super"
-        # ];
         numlock_by_default = true;
         repeat_delay = 300;
         follow_mouse = 1;
@@ -159,8 +151,8 @@ in {
       };
 
       render = {
-        explicit_sync = 1; # Change to 1 to disable
-        explicit_sync_kms = 1;
+        # explicit_sync = 1; # Change to 1 to disable
+        # explicit_sync_kms = 1;
         direct_scanout = 0;
       };
 
