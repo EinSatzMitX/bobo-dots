@@ -146,15 +146,15 @@
         zig.enable = true;
         python.enable = true;
         markdown.enable = true;
-        # ts = {
-        #   enable = true;
-        #   lsp.enable = true;
-        #   format.type = "prettierd";
-        #   extensions.ts-error-translator.enable = true;
-        # };
+        ts = {
+          enable = true;
+          lsp.enable = true;
+          format.type = "prettierd";
+          extensions.ts-error-translator.enable = true;
+        };
         html.enable = true;
         lua.enable = true;
-        # css.enable = true;
+        css.enable = true;
         typst.enable = true;
         rust = {
           enable = true;
@@ -191,7 +191,7 @@
         gitsigns.codeActions.enable = false;
       };
       projects.project-nvim.enable = true;
-      dashboard.dashboard-nvim.enable = true;
+      dashboard.dashboard-nvim.enable = false;
       filetree.neo-tree.enable = true;
       notify = {
         nvim-notify.enable = true;

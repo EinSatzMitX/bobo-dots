@@ -23,7 +23,7 @@ in {
     # ./legendary.nix
     ./nvf.nix
     ./rofi
-    ./quickshell.nix
+    ./quickshell
     ./qt.nix
     ./scripts
     ./starship.nix
