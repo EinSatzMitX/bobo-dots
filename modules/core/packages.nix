@@ -47,7 +47,7 @@
       glibc # I'm not quite sure why a build package is in my system packages, but I'm too afraid to remove it
       glxinfo #needed for inxi diag util
       godot # Open source game engine
-      greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
+      tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
       htop # Simple Terminal Based System Monitor
       hyprpicker # Color Picker
       eog # For Image Viewing

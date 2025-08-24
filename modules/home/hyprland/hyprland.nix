@@ -54,7 +54,8 @@ in {
         "systemctl --user start hyprpolkitagent"
         "killall -q swww;sleep .5 && swww-daemon &"
         "killall -q waybar;sleep .5 && waybar"
-        "killall -q swaync;sleep .5 && swaync"
+        # "killall -q swaync;sleep .5 && swaync"
+        "systemctl --user --no-block start swaync.service"
         "nm-applet --indicator"
         "pypr &"
         "sleep 1.5 && swww img ${stylixImage}"
@@ -164,12 +165,6 @@ in {
     };
 
     extraConfig = "
-      # 1. DP-1 (Asus VG278) links, 144 Hz exakt
-      monitor=DP-1,1920x1080@144.001007,0x0,1
-
-      # 2. DP-2 (Iiyama PL2492H) rechts, 60 Hz
-      monitor=DP-2,1920x1080@74.973000,1920x0,1
-
       ${extraMonitorSettings}
         # To enable blur on waybar uncomment the line below
         # Thanks to SchotjeChrisman

@@ -6,10 +6,16 @@
   # Hyprland Settings
   # ex: extraMonitorSettings = "monitor = Virtual-1,1920x1080@60,auto,1";
   # ex: extraMonitorSettings = "monitor = HDMI-A-1,1920x1080@60,auto,1";
-  extraMonitorSettings = "";
+  extraMonitorSettings = "
+    # 1. DP-1 (Asus VG278) links, 144 Hz
+     monitor=DP-1,1920x1080@144.001007,0x0,1
+
+     # 2. DP-2 (Iiyama PL2492H) rechts, 75 Hz
+     monitor=DP-2,1920x1080@74.973000,1920x0,1
+  ";
 
   # Waybar Settings
-  clock24h = false;
+  clock24h = true;
 
   # Program Options
   browser = "brave"; # Set Default Browser (google-chrome-stable for google-chrome)
@@ -18,6 +24,7 @@
   consoleKeyMap = "de";
 
   # For Nvidia Prime support
+  # (not necessary on my machine)
   intelID = "PCI:1:0:0";
   nvidiaID = "PCI:0:2:0";
 
