@@ -62,6 +62,7 @@
       lshw # Detailed Hardware Information
       lutris # Game Launcher for EXE files
       manim # Python lib/program to create math animations
+      mako # # Notification daemon, because swaync crashes
       mpv # Incredible Video Player
       nautilus # GUI File manager, for drag&drop windows
       ncdu # Disk Usage Analyzer With Ncurses Interface

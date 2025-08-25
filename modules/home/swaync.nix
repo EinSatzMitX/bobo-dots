@@ -1,6 +1,6 @@
 {config, ...}: {
   services.swaync = {
-    enable = true;
+    enable = false;
     settings = {
       positionX = "right";
       positionY = "top";
@@ -17,7 +17,7 @@
       timeout-critical = 0;
       fit-to-screen = true;
       control-center-width = 500;
-      control-center-height = 1014;
+      control-center-height = 900;
       notification-window-width = 500;
       keyboard-shortcuts = true;
       image-visibility = "when-available";
@@ -45,15 +45,15 @@
         volume = {
           label = "󰕾";
         };
-        backlight = {
-          label = "󰃟";
-        };
+        # backlight = {
+        #   label = "󰃟";
+        # };
       };
       widgets = [
         "title"
         "mpris"
         "volume"
-        "backlight"
+        # "backlight"
         "dnd"
         "notifications"
       ];
@@ -298,14 +298,14 @@
         margin: 0 8px 8px;
         border-radius: 5px;
       }
-      .widget-backlight {
-        background: #${config.lib.stylix.colors.base01};
-        padding: 5px;
-        margin: 10px 10px 5px 10px;
-        border-radius: 5px;
-        font-size: x-large;
-        color: #${config.lib.stylix.colors.base05};
-      }
+      # .widget-backlight {
+      #   background: #${config.lib.stylix.colors.base01};
+      #   padding: 5px;
+      #   margin: 10px 10px 5px 10px;
+      #   border-radius: 5px;
+      #   font-size: x-large;
+      #   color: #${config.lib.stylix.colors.base05};
+      # }
     '';
   };
 }
