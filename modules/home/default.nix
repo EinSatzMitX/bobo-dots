@@ -21,6 +21,7 @@ in {
     ./kitty.nix
     ./lazygit.nix
     # ./legendary.nix
+    ./mako.nix
     ./nvf.nix
     ./rofi
     ./quickshell
