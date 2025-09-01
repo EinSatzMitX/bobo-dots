@@ -15,8 +15,7 @@ in {
       padding: 75px 40px;
       background-color: transparent;
 
-      I don't know how to correctly include the stylixImage, so i guess change this when changing the image
-      background-image: url("~/Pictures/Wallpapers/anime_girl_study.jpeg", width);
+      background-image: url("~/Pictures/Wallpapers/chinese.png", width);
       text-color: @foreground;
       children: [ "textbox-prompt-colon", "entry" ];
     }

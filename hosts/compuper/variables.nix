@@ -35,7 +35,7 @@
   printEnable = false;
 
   # Set Stylix Image
-  stylixImage = ../../wallpapers/anime_girl_study.jpeg;
+  stylixImage = ../../wallpapers/chinese.png;
 
   # Set Waybar
   #  Available Options:

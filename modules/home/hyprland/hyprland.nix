@@ -67,8 +67,8 @@ in {
         repeat_delay = 300;
         follow_mouse = 1;
         float_switch_override_focus = 0;
-        sensitivity = 0;
-        # sensitivity = 0.5;
+        # sensitivity = 0;
+        sensitivity = 0.5;
         touchpad = {
           natural_scroll = true;
           disable_while_typing = true;
@@ -100,10 +100,10 @@ in {
 
       misc = {
         layers_hog_keyboard_focus = true;
-        initial_workspace_tracking = 0;
+        initial_workspace_tracking = 1;
         mouse_move_enables_dpms = true;
         key_press_enables_dpms = false;
-        disable_hyprland_logo = false;
+        disable_hyprland_logo = true;
         disable_splash_rendering = false;
         enable_swallow = false;
         vfr = true; # Variable Frame Rate
@@ -169,7 +169,7 @@ in {
       ${extraMonitorSettings}
         # To enable blur on waybar uncomment the line below
         # Thanks to SchotjeChrisman
-        #layerrule = blur,waybar
+        layerrule = blur,waybar
     ";
   };
 }
