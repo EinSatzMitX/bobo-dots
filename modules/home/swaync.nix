@@ -1,6 +1,6 @@
 {config, ...}: {
   services.swaync = {
-    enable = false;
+    # enable = true;
     settings = {
       positionX = "right";
       positionY = "top";
@@ -17,7 +17,7 @@
       timeout-critical = 0;
       fit-to-screen = true;
       control-center-width = 500;
-      control-center-height = 900;
+      control-center-height = 1025;
       notification-window-width = 500;
       keyboard-shortcuts = true;
       image-visibility = "when-available";

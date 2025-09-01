@@ -35,7 +35,7 @@
   printEnable = false;
 
   # Set Stylix Image
-  stylixImage = ../../wallpapers/chinese.png;
+  stylixImage = ../../wallpapers/silksong_lava_boss.jpg;
 
   # Set Waybar
   #  Available Options:

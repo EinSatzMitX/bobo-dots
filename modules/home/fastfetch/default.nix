@@ -5,37 +5,37 @@
     settings = {
       display = {
         color = {
-          keys = "35";
-          output = "95";
+          keys = "33";
+          output = "37";
         };
         separator = " ➜  ";
       };
 
-      # logo = {
-      #   source = ./nixos.png;
-      #   type = "kitty-direct";
-      #   height = 10;
-      #   width = 20;
-      #   padding = {
-      #     top = 2;
-      #     left = 2;
-      #   };
-      # };
-
       logo = {
-        # Treat the source as raw text, no color placeholders
-        type = "data-raw";
-        source = ''
-            ／l、
-          （ﾟ､ ｡ ７
-            l  ~ヽ
-            じしf_,)ノ
-        '';
+        source = ./broken_vessel.png;
+        type = "kitty-direct";
+        height = 10;
+        width = 20;
         padding = {
           top = 2;
           left = 2;
         };
       };
+
+      # logo = {
+      #   # Treat the source as raw text, no color placeholders
+      #   type = "data-raw";
+      #   source = ''
+      #       ／l、
+      #     （ﾟ､ ｡ ７
+      #       l  ~ヽ
+      #       じしf_,)ノ
+      #   '';
+      #   padding = {
+      #     top = 2;
+      #     left = 2;
+      #   };
+      # };
 
       modules = [
         "break"
