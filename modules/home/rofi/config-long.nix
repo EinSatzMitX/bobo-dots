@@ -15,7 +15,7 @@ in {
       padding: 75px 40px;
       background-color: transparent;
 
-      background-image: url("~/Pictures/Wallpapers/chinese.png", width);
+      background-image: url("~/Pictures/Wallpapers/silksong_cover.jpg", width);
       text-color: @foreground;
       children: [ "textbox-prompt-colon", "entry" ];
     }

@@ -57,7 +57,7 @@
         "imagebox" = {
           padding = mkLiteral "20px";
           background-color = mkLiteral "transparent";
-          background-image = mkLiteral ''url("~/Pictures/Wallpapers/chinese.png", height)'';
+          background-image = mkLiteral ''url("~/Pictures/Wallpapers/silksong_cover.jpg", height)'';
           orientation = mkLiteral "vertical";
           children = map mkLiteral [
             "inputbar"

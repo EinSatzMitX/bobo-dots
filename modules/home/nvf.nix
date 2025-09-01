@@ -38,6 +38,10 @@
             action = "<CMD>Neotree toggle<CR>";
             silent = false;
           };
+          "<leader>m" = {
+            action = "<CMD>MarkdownPreviewToggle<CR>";
+            silent = false;
+          };
         };
       };
 
