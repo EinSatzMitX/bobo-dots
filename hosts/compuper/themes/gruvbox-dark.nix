@@ -16,4 +16,7 @@
     base0E = "D3869B";
     base0F = "D65D0E";
   };
+
+  # Set Stylix Image
+  stylixImage = ../../../wallpapers/silksong_lava_boss.jpg;
 }

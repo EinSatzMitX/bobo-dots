@@ -1,4 +1,13 @@
-_: {
+{
+  profile,
+  host,
+  ...
+}: let
+  inherit
+    (import ../../hosts/${host}/themes/${profile}.nix)
+    base
+    ;
+in {
   home.file.".config/mako/config".text = ''
     layer=top
     markup=1

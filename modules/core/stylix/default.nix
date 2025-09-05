@@ -4,7 +4,7 @@
   profile,
   ...
 }: let
-  inherit (import ../../../hosts/${host}/variables.nix) stylixImage;
+  inherit (import ../../../hosts/${host}/themes/${profile}.nix) stylixImage;
 in {
   imports = [
     ./${profile}.nix

@@ -61,7 +61,8 @@ in
             format = " {free}";
             tooltip = true;
             # Not working with zaneyos window open then closes
-            #on-click = "${terminal} -e sh -c df -h ; read";
+            # on-click = "${terminal} -e sh -c df -h ; read";
+            on-click = "${terminal} -e lsblk | bc";
           };
           "network" = {
             format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
@@ -151,192 +152,118 @@ in
             font-family: JetBrainsMono Nerd Font, Font Awesome, sans-serif;
             font-weight: bold;
           }
+
           window#waybar {
-            /*
-
-              background-color: rgba(26,27,38,0);
-              border-bottom: 1px solid rgba(26,27,38,0);
-              border-radius: 0px;
-              color: #${base.base0F};
-            */
-
-            background-color: rgba(26,27,38,0);
-            border-bottom: 1px solid rgba(26,27,38,0);
+            background-color: rgba(36,39,58,0.8);
+            border-bottom: 1px solid rgba(30,32,48,0.8);
             border-radius: 0px;
-            color: #${base.base0F};
+            color: #${base.base05};
           }
-          #workspaces {
-            /*
-              Eternal
-              background: linear-gradient(180deg, #${base.base00}, #${base.base01});
-              margin: 5px 5px 5px 0px;
-              padding: 0px 10px;
-              border-radius: 0px 15px 50px 0px;
-              border: 0px;
-              font-style: normal;
-              color: #${base.base00};
-            */
-            background: linear-gradient(45deg, #${base.base01}, #${base.base01});
+
+          #workspaces, #window {
+            background: linear-gradient(90deg,
+              #${base.base08}, /* red */
+              #${base.base09}, /* peach */
+              #${base.base0A}, /* yellow */
+              #${base.base0B}, /* green */
+              #${base.base0C}, /* teal */
+              #${base.base0D}, /* blue */
+              #${base.base0E}  /* mauve */
+            );
             margin: 5px;
-            padding: 0px 1px;
+            padding: 2px 20px;
             border-radius: 15px;
             border: 0px;
-            font-style: normal;
             color: #${base.base00};
           }
+
           #workspaces button {
             padding: 0px 5px;
             margin: 4px 3px;
             border-radius: 15px;
             border: 0px;
             color: #${base.base00};
-            background: linear-gradient(45deg, #${base.base09}, #${base.base0A});
-            opacity: 0.5;
+            background: #${base.base02};
+            opacity: 0.7;
             transition: all 0.3s ease-in-out;
           }
+
           #workspaces button.active {
-            padding: 0px 5px;
-            margin: 4px 3px;
-            border-radius: 15px;
-            border: 0px;
+            background: #${base.base05};
             color: #${base.base00};
-            background: linear-gradient(45deg, #${base.base09}, #${base.base0A});
             opacity: 1.0;
             min-width: 40px;
-            transition: all 0.3s ease-in-out;
           }
+
           #workspaces button:hover {
-            border-radius: 15px;
-            color: #${base.base00};
-            background: linear-gradient(45deg, #${base.base09}, #${base.base0A});
-            opacity: 0.8;
+            background: #${base.base03};
+            color: #${base.base05};
+            opacity: 0.9;
           }
+
           tooltip {
-            background: #${base.base00};
+            background: #${base.base01};
             border: 1px solid #${base.base0E};
             border-radius: 10px;
           }
+
           tooltip label {
-            color: #${base.base07};
-          }
-          #window {
-            /*
-              Eternal
-              color: #${base.base05};
-              background: #${base.base00};
-              border-radius: 15px;
-              margin: 5px;
-              padding: 2px 20px;
-            */
-            margin: 5px;
-            padding: 2px 20px;
             color: #${base.base05};
-            background: #${base.base01};
-            border-radius: 50px 15px 50px 15px;
           }
-          #memory {
-            color: #${base.base0F};
-            /*
-              Eternal
-              background: #${base.base00};
-              border-radius: 50px 15px 50px 15px;
-              margin: 5px;
-              padding: 2px 20px;
-            */
-            background: #${base.base01};
-            margin: 5px;
-            padding: 2px 20px;
-            border-radius: 15px 50px 15px 50px;
-          }
+
           #clock {
             color: #${base.base0B};
-              background: #${base.base00};
-              border-radius: 15px 50px 15px 50px;
-              margin: 5px;
-              padding: 2px 20px;
+            background: #${base.base01};
+            border-radius: 15px;
+            margin: 5px;
+            padding: 2px 20px;
           }
-          #idle_inhibitor {
-            color: #${base.base0A};
-              background: #${base.base00};
-              border-radius: 50px 15px 50px 15px;
-              margin: 5px;
-              padding: 2px 20px;
-          }
+
           #cpu {
-            color: #${base.base07};
-              background: #${base.base00};
-              border-radius: 50px 15px 50px 15px;
-              margin: 5px;
-              padding: 2px 20px;
+            color: #${base.base0D};
+            background: #${base.base01};
+            border-radius: 15px;
+            margin: 5px;
+            padding: 2px 20px;
           }
-          #disk {
+
+          #memory {
             color: #${base.base0F};
-              background: #${base.base00};
-              border-radius: 15px 50px 15px 50px;
-              margin: 5px;
-              padding: 2px 20px;
+            background: #${base.base01};
+            border-radius: 15px;
+            margin: 5px;
+            padding: 2px 20px;
           }
+
+          #network {
+            color: #${base.base0C};
+            background: #${base.base01};
+            border-radius: 15px;
+            margin: 5px;
+            padding: 2px 20px;
+          }
+
+          #pulseaudio {
+            color: #${base.base0A};
+            background: #${base.base01};
+            border-radius: 15px;
+            margin: 5px;
+            padding: 2px 20px;
+          }
+
           #battery {
             color: #${base.base08};
-            background: #${base.base00};
-            border-radius: 15px 50px 15px 50px;
+            background: #${base.base01};
+            border-radius: 15px;
             margin: 5px;
             padding: 2px 20px;
           }
-          #network {
-            color: #${base.base09};
-            background: #${base.base00};
-            border-radius: 50px 15px 50px 15px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
+
           #tray {
             color: #${base.base05};
-            background: #${base.base00};
-            border-radius: 15px 50px 15px 50px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
-          #pulseaudio {
-            color: #${base.base0D};
-            /*
-              Eternal
-              background: #${base.base00};
-              border-radius: 15px 50px 15px 50px;
-              margin: 5px;
-              padding: 2px 20px;
-            */
             background: #${base.base01};
-            margin: 4px;
-            padding: 2px 20px;
-            border-radius: 50px 15px 50px 15px;
-          }
-          #custom-notification {
-            color: #${base.base0C};
-            background: #${base.base00};
-            border-radius: 15px 50px 15px 50px;
+            border-radius: 15px;
             margin: 5px;
-            padding: 2px 20px;
-          }
-          #custom-startmenu {
-            color: #${base.base0E};
-            background: #${base.base00};
-            border-radius: 0px 15px 50px 0px;
-            margin: 5px 5px 5px 0px;
-            padding: 2px 20px;
-          }
-          #idle_inhibitor {
-            color: #${base.base09};
-            background: #${base.base00};
-            border-radius: 15px 50px 15px 50px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
-          #custom-exit {
-            color: #${base.base0E};
-            background: #${base.base00};
-            border-radius: 15px 0px 0px 50px;
-            margin: 5px 0px 5px 5px;
             padding: 2px 20px;
           }
         ''

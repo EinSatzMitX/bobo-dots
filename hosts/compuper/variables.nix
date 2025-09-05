@@ -34,9 +34,6 @@
   # Enable Printing Support
   printEnable = false;
 
-  # Set Stylix Image
-  stylixImage = ../../wallpapers/silksong_lava_boss.jpg;
-
   # Set Waybar
   #  Available Options:
   # waybarChoice = ../../modules/home/waybar/waybar-curved.nix;

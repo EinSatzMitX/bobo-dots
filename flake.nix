@@ -21,7 +21,8 @@
   } @ inputs: let
     system = "x86_64-linux";
     host = "compuper";
-    profile = "gruvbox-dark";
+    # profile = "gruvbox-dark";
+    profile = "catpuccin-macchiato";
     username = "bobo";
   in {
     nixosConfigurations = {
@@ -54,6 +55,16 @@
           inherit profile;
         };
         modules = [./profiles/catpuccin-mocha];
+      };
+      catpuccin-macchiato = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
+        };
+        modules = [./profiles/catpuccin-macchiato];
       };
     };
   };

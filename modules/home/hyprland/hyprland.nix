@@ -2,12 +2,16 @@
   host,
   config,
   pkgs,
+  profile,
   ...
 }: let
   inherit
     (import ../../../hosts/${host}/variables.nix)
     extraMonitorSettings
     keyboardLayout
+    ;
+  inherit
+    (import ../../../hosts/${host}/themes/${profile}.nix)
     stylixImage
     ;
 in {
