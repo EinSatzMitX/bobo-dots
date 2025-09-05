@@ -20,6 +20,7 @@
       ls = "eza --icons";
       ll = "eza -lh --icons --grid --group-directories-first";
       la = "eza -lah --icons --grid --group-directories-first";
+      bc = "bat -l conf";
       ".." = "cd ..";
     };
   };

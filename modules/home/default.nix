@@ -5,7 +5,7 @@ in {
     # ./amfora.nix
     ./bash.nix
     ./bashrc-personal.nix
-    # ./bat.nix
+    ./bat.nix
     ./btop.nix
     # ./cava.nix
     ./emoji.nix

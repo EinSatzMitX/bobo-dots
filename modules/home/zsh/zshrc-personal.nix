@@ -9,12 +9,15 @@
       #!/usr/bin/env zsh
       # Set defaults
       #
-      #export EDITOR="nvim"
-      #export VISUAL="nvim"
+      export EDITOR="nvim"
+      export VISUAL="nvim"
 
-      #alias c="clear"
+      alias c="clear"
 
       alias ff="fastfetch"
+
+      alias bc="bat -l conf"
+
 
 
   '';
