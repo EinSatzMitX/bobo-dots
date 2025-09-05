@@ -21,11 +21,11 @@
   } @ inputs: let
     system = "x86_64-linux";
     host = "compuper";
-    profile = "nvidia";
+    profile = "gruvbox-dark";
     username = "bobo";
   in {
     nixosConfigurations = {
-      nvidia = nixpkgs.lib.nixosSystem {
+      gruvbox-dark = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
           inherit inputs;
@@ -33,7 +33,27 @@
           inherit host;
           inherit profile;
         };
-        modules = [./profiles/nvidia];
+        modules = [./profiles/gruvbox-dark];
+      };
+      gruvbox-light = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
+        };
+        modules = [./profiles/gruvbox-light];
+      };
+      catpuccin-mocha = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
+        };
+        modules = [./profiles/catpuccin-mocha];
       };
     };
   };
