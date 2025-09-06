@@ -20,4 +20,5 @@
   };
 
   stylixImage = ../../../wallpapers/windows-error.jpg;
+  rofiImage = "flatpuccin_4k_macchiato.png";
 }

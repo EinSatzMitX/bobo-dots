@@ -1,8 +1,15 @@
 {
   pkgs,
   config,
+  host,
+  profile,
   ...
-}: {
+}: let
+  inherit
+    (import ../../../hosts/${host}/themes/${profile}.nix)
+    rofiImage
+    ;
+in {
   programs = {
     rofi = {
       enable = true;
@@ -57,7 +64,7 @@
         "imagebox" = {
           padding = mkLiteral "20px";
           background-color = mkLiteral "transparent";
-          background-image = mkLiteral ''url("~/Pictures/Wallpapers/silksong_cover.jpg", height)'';
+          background-image = mkLiteral ''url("~/Pictures/Wallpapers/${rofiImage}", height)'';
           orientation = mkLiteral "vertical";
           children = map mkLiteral [
             "inputbar"

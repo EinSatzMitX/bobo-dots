@@ -19,9 +19,9 @@ in
           layer = "top";
           position = "top";
 
-          modules-center = ["network" "pulseaudio" "cpu" "hyprland/workspaces" "memory" "disk" "clock"]; # Eterna: [ "hyprland/window" ]
+          modules-center = ["network" "pulseaudio" "cpu" "hyprland/workspaces" "memory" "clock"]; # Eterna: [ "hyprland/window" ]
           modules-left = ["custom/startmenu" "hyprland/window"]; # Eternal:  [ "hyprland/workspaces" "cpu" "memory" "network" ]
-          modules-right = ["tray" "idle_inhibitor" "custom/notification" "battery" "custom/exit"]; # Eternal: [ "idle_inhibitor" "pulseaudio" "clock"  "custom/notification" "tray" ]
+          modules-right = ["tray" "custom/notification" "custom/exit"]; # Eternal: [ "idle_inhibitor" "pulseaudio" "clock"  "custom/notification" "tray" ]
 
           "hyprland/workspaces" = {
             format = "{name}";
@@ -147,125 +147,140 @@ in
       ];
       style = concatStrings [
         ''
-          * {
-            font-size: 16px;
-            font-family: JetBrainsMono Nerd Font, Font Awesome, sans-serif;
-            font-weight: bold;
-          }
-
-          window#waybar {
+                    * {
+                      font-size: 16px;
+                      font-family: JetBrainsMono Nerd Font, Font Awesome, sans-serif;
+                      font-weight: bold;
+                    }
+                    window#waybar {
             background-color: rgba(36,39,58,0.8);
             border-bottom: 1px solid rgba(30,32,48,0.8);
             border-radius: 0px;
             color: #${base.base05};
+
+            /* Fix spacing */
+            padding: 0px 10px;   /* adds space at left + right edges */
           }
 
-          #workspaces, #window {
-            background: linear-gradient(90deg,
-              #${base.base08}, /* red */
-              #${base.base09}, /* peach */
-              #${base.base0A}, /* yellow */
-              #${base.base0B}, /* green */
-              #${base.base0C}, /* teal */
-              #${base.base0D}, /* blue */
-              #${base.base0E}  /* mauve */
-            );
-            margin: 5px;
-            padding: 2px 20px;
-            border-radius: 15px;
-            border: 0px;
-            color: #${base.base00};
+          .modules-left {
+            margin-left: 25px;
           }
 
-          #workspaces button {
-            padding: 0px 5px;
-            margin: 4px 3px;
-            border-radius: 15px;
-            border: 0px;
-            color: #${base.base00};
-            background: #${base.base02};
-            opacity: 0.7;
-            transition: all 0.3s ease-in-out;
+          .modules-right {
+            margin-right: 25px;
           }
 
-          #workspaces button.active {
-            background: #${base.base05};
-            color: #${base.base00};
-            opacity: 1.0;
-            min-width: 40px;
+          .modules-center {
+            margin: 0px 20px; /* centers the rainbow better */
           }
 
-          #workspaces button:hover {
-            background: #${base.base03};
-            color: #${base.base05};
-            opacity: 0.9;
-          }
 
-          tooltip {
-            background: #${base.base01};
-            border: 1px solid #${base.base0E};
-            border-radius: 10px;
-          }
+                    #workspaces, #window {
+                      background: linear-gradient(90deg,
+                        #${base.base08}, /* red */
+                        #${base.base09}, /* peach */
+                        #${base.base0A}, /* yellow */
+                        #${base.base0B}, /* green */
+                        #${base.base0C}, /* teal */
+                        #${base.base0D}, /* blue */
+                        #${base.base0E}  /* mauve */
+                      );
+                      margin: 5px;
+                      padding: 2px 20px;
+                      border-radius: 15px;
+                      border: 0px;
+                      color: #${base.base00};
+                    }
 
-          tooltip label {
-            color: #${base.base05};
-          }
+                    #workspaces button {
+                      padding: 0px 5px;
+                      margin: 4px 3px;
+                      border-radius: 15px;
+                      border: 0px;
+                      color: #${base.base00};
+                      background: #${base.base02};
+                      opacity: 0.7;
+                      transition: all 0.3s ease-in-out;
+                    }
 
-          #clock {
-            color: #${base.base0B};
-            background: #${base.base01};
-            border-radius: 15px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
+                    #workspaces button.active {
+                      background: #${base.base05};
+                      color: #${base.base00};
+                      opacity: 1.0;
+                      min-width: 40px;
+                    }
 
-          #cpu {
-            color: #${base.base0D};
-            background: #${base.base01};
-            border-radius: 15px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
+                    #workspaces button:hover {
+                      background: #${base.base03};
+                      color: #${base.base05};
+                      opacity: 0.9;
+                    }
 
-          #memory {
-            color: #${base.base0F};
-            background: #${base.base01};
-            border-radius: 15px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
+                    tooltip {
+                      background: #${base.base01};
+                      border: 1px solid #${base.base0E};
+                      border-radius: 10px;
+                    }
 
-          #network {
-            color: #${base.base0C};
-            background: #${base.base01};
-            border-radius: 15px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
+                    tooltip label {
+                      color: #${base.base05};
+                    }
 
-          #pulseaudio {
-            color: #${base.base0A};
-            background: #${base.base01};
-            border-radius: 15px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
+                    #clock {
+                      color: #${base.base0B};
+                      background: #${base.base01};
+                      border-radius: 15px;
+                      margin: 5px;
+                      padding: 2px 20px;
+                    }
 
-          #battery {
-            color: #${base.base08};
-            background: #${base.base01};
-            border-radius: 15px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
+                    #cpu {
+                      color: #${base.base0D};
+                      background: #${base.base01};
+                      border-radius: 15px;
+                      margin: 5px;
+                      padding: 2px 20px;
+                    }
 
-          #tray {
-            color: #${base.base05};
-            background: #${base.base01};
-            border-radius: 15px;
-            margin: 5px;
-            padding: 2px 20px;
-          }
+                    #memory {
+                      color: #${base.base0F};
+                      background: #${base.base01};
+                      border-radius: 15px;
+                      margin: 5px;
+                      padding: 2px 20px;
+                    }
+
+                    #network {
+                      color: #${base.base0C};
+                      background: #${base.base01};
+                      border-radius: 15px;
+                      margin: 5px;
+                      padding: 2px 20px;
+                    }
+
+                    #pulseaudio {
+                      color: #${base.base0A};
+                      background: #${base.base01};
+                      border-radius: 15px;
+                      margin: 5px;
+                      padding: 2px 20px;
+                    }
+
+                    #battery {
+                      color: #${base.base08};
+                      background: #${base.base01};
+                      border-radius: 15px;
+                      margin: 5px;
+                      padding: 2px 20px;
+                    }
+
+                    #tray {
+                      color: #${base.base05};
+                      background: #${base.base01};
+                      border-radius: 15px;
+                      margin: 5px;
+                      padding: 2px 20px;
+                    }
         ''
       ];
     };

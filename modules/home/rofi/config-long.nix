@@ -1,5 +1,13 @@
-{...}: let
+{
+  profile,
+  host,
+  ...
+}: let
   # inherit (import ../../hosts/${host}/variables.nix) stylixImage;
+  inherit
+    (import ../../../hosts/${host}/themes/${profile}.nix)
+    rofiImage
+    ;
 in {
   home.file.".config/rofi/config-long.rasi".text = ''
     @import "~/.config/rofi/config.rasi"
@@ -15,7 +23,7 @@ in {
       padding: 75px 40px;
       background-color: transparent;
 
-      background-image: url("~/Pictures/Wallpapers/silksong_cover.jpg", width);
+      background-image: url("~/Pictures/Wallpapers/${rofiImage}", width);
       text-color: @foreground;
       children: [ "textbox-prompt-colon", "entry" ];
     }

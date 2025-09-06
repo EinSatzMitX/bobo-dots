@@ -21,8 +21,8 @@
   } @ inputs: let
     system = "x86_64-linux";
     host = "compuper";
-    # profile = "gruvbox-dark";
-    profile = "catpuccin-macchiato";
+    profile = "gruvbox-dark";
+    # profile = "catpuccin-macchiato";
     username = "bobo";
   in {
     nixosConfigurations = {
