@@ -12,6 +12,13 @@ If you want to clone this config, follow the blog on the
 I changed some things, and things might break on your machine, especially
 regarding the fact that I'm using the unmstable branch.
 
+## How to configure
+
+One of the easiest and quickest ways to configure the setup, is to change your
+profile. Currently there are two profiles: gruvbox-dark and catpuccin-macchiato
+(make sure to spell that correctly). They are both dark mode profiles and
+include their own respectively named files.
+
 ## Configured Programs
 
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)

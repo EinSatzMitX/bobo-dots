@@ -153,7 +153,7 @@ in
                       font-weight: bold;
                     }
                     window#waybar {
-            background-color: rgba(36,39,58,0.8);
+            background-color: transparent;
             border-bottom: 1px solid rgba(30,32,48,0.8);
             border-radius: 0px;
             color: #${base.base05};

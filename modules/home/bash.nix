@@ -21,6 +21,7 @@
       ll = "eza -lh --icons --grid --group-directories-first";
       la = "eza -lah --icons --grid --group-directories-first";
       bc = "bat -l conf";
+      gc = "git commit -am";
       ".." = "cd ..";
     };
   };

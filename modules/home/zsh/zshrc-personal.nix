@@ -13,10 +13,9 @@
       export VISUAL="nvim"
 
       alias c="clear"
-
       alias ff="fastfetch"
-
       alias bc="bat -l conf"
+      alias gc="git commit -am"
 
 
 
